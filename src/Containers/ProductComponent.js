@@ -5,7 +5,7 @@ const ProductComponent = () => {
   const products = useSelector((state) => state?.allProducts?.products)
 
   const renderList = products.map((product) => {
-    const { id, image, title, price, category, description } = product
+    const { id, image, title, price } = product
     return (
       <Link to={`/product/${id}`}>
         <div class="bg-white shadow-lg rounded-sm overflow-hidden p-4 h-[350px]">
