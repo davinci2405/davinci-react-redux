@@ -7,18 +7,18 @@ const ProductComponent = () => {
   const renderList = products.map((product) => {
     const { id, image, title, price } = product
     return (
-      <Link to={`/product/${id}`}>
-        <div class="bg-white shadow-lg rounded-sm overflow-hidden p-4 h-[350px]">
-          <div class="w-full flex justify-center bg-cover">
+      <Link to={`/product/${id}`} key={id}>
+        <div className="bg-white shadow-lg rounded-sm overflow-hidden p-4 h-[350px]">
+          <div className="w-full flex justify-center bg-cover">
             <img src={image} alt="" className="h-[180px]" />
           </div>
-          <div class="w-full p-4">
-            <div class="text-gray-900 font-bold text-2xl min-h-[84px]">
+          <div className="w-full p-4">
+            <div className="text-gray-900 font-bold text-2xl min-h-[84px]">
               {title}
             </div>
-            <div class="flex items-end justify-between mt-3 ">
-              <h1 class="text-gray-700 font-bold text-xl">${price}</h1>
-              <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
+            <div className="flex items-end justify-between mt-3 ">
+              <h1 className="text-gray-700 font-bold text-xl">${price}</h1>
+              <button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
                 Add to Card
               </button>
             </div>
